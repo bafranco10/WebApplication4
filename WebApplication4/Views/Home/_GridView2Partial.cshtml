@@ -1,12 +1,12 @@
 ﻿@{
     var grid = Html.DevExpress().GridView(settings =>
     {
-        settings.Name = "GridView";
-        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+        settings.Name = "GridView2";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridView2Partial" };
 
-        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "GridViewPartialAddNew" };
-        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "GridViewPartialUpdate" };
-        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "GridViewPartialDelete" };
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "GridView2PartialAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "GridView2PartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "GridView2PartialDelete" };
         settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
         settings.SettingsBehavior.ConfirmDelete = true;
 

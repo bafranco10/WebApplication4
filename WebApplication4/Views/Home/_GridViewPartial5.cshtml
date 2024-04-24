@@ -1,12 +1,11 @@
 ﻿@{
-    var grid = Html.DevExpress().GridView(settings =>
-    {
+    var grid = Html.DevExpress().GridView(settings => {
         settings.Name = "GridView";
-        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial5" };
 
-        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "GridViewPartialAddNew" };
-        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "GridViewPartialUpdate" };
-        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "GridViewPartialDelete" };
+                settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "GridViewPartial5AddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "GridViewPartial5Update" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "GridViewPartial5Delete" };
         settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
         settings.SettingsBehavior.ConfirmDelete = true;
 
@@ -15,7 +14,7 @@
         settings.CommandColumn.ShowDeleteButton = true;
         settings.CommandColumn.ShowEditButton = true;
 
-        settings.KeyFieldName = "CustomerID";
+        settings.KeyFieldName = "OrderID";
 
         settings.SettingsPager.Visible = true;
         settings.Settings.ShowGroupPanel = true;
@@ -28,15 +27,14 @@
         settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
         settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
 
-        settings.Columns.Add("Fname");
-        settings.Columns.Add("Lname");
-        settings.Columns.Add("Department");
-        settings.Columns.Add("Phone");
-        settings.Columns.Add("Address");
-        settings.Columns.Add("CustomerID");
-    });
-    if (ViewData["EditError"] != null)
-    {
+                settings.Columns.Add("CustomerId");
+                settings.Columns.Add("OrderDate");
+                settings.Columns.Add("OrderItem");
+                settings.Columns.Add("Quantity");
+                settings.Columns.Add("OrderID");
+                settings.Columns.Add("Customer");
+            });
+        if (ViewData["EditError"] != null){
         grid.SetEditErrorText((string)ViewData["EditError"]);
     }
 }

@@ -1,19 +1,33 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Orders";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
+main>
+<section class="row" aria-labelledby="aspnetTitle">
+    <h1 id="title">Orders</h1>
+    <p class="lead">Here we are able to see all the information pertaining to customer orders in the database</p>
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+</section>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+<div class="row">
+    <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+        <h2 id="gettingStartedTitle">Getting started</h2>
+        <p>
+            Through the use of ASP.NET's MVC we can seperate all the individual views and layouts that we may want. Apart from this seperation of views and layouts we are able to produce modular code to maintain a clean codebase.
+            To learn more about ASP.NET MVC click below.
+        </p>
+        <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </section>
+    <section class="col-md-4" aria-labelledby="librariesTitle">
+        <h2 id="librariesTitle">Get more libraries</h2>
+        <p>Ensure that customer orders have as much detail in their entries as possible</p>
+    </section>
+    <section class="col-md-4" aria-labelledby="hostingTitle">
+        <h2 id="hostingTitle">Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </section>
+</div>
 </main>
+
+
+@Html.Action("GridView1Partial", "Home")
